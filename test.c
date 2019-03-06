@@ -38,6 +38,6 @@ float calculate_mtof(float mtof)
 float calculate_float(unsigned char byte_array[4])
 {
     	float out;
-	out = (byte_array[0] << 24) | (byte_array[1] << 16) | (byte_array[2] << 8) | (byte_array[3]);
+	out = (byte_array[3] << 24) | (byte_array[2] << 16) | (byte_array[1] << 8) | (byte_array[0]);
 	return out;  
 }
