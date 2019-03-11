@@ -11,11 +11,11 @@ float calculate_float(unsigned char byte_array[4]);
 int main(void)
 {
 	int lsb = 12, msb = 2;
-    int serial = 79;
+    	int serial = 79;
 	__int16_t data1;
 	float data2, x;
-    unsigned char arr[] = {142, 220, 142, 63};
-    x = calculate_float(arr);
+    	unsigned char arr[] = {142, 220, 142, 63};
+    	x = calculate_float(arr);
 	data1 = _16bit_unsigned(lsb, msb);
 	data2 = calculate_mtof(serial);
 	printf("Converted 16_bit unsigned Value: %d\n", data1);
@@ -43,6 +43,7 @@ float calculate_float(unsigned char byte_array[4])
 		float f;
 		unsigned char arr[4];
 	}out;
+	
 	out.arr[0] = byte_array[0];
 	out.arr[1] = byte_array[1];
 	out.arr[2] = byte_array[2];
